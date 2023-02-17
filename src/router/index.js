@@ -15,6 +15,22 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
   },
+  {
+    path: '/newPage',
+    name: '新頁面',
+    component: () => import('../views/NewPage.vue'),
+    // router的巢狀結構
+    children: [
+      {
+        path: '1',
+        component: () => import('../views/componentA.vue'),
+      },
+      {
+        path: '2',
+        component: () => import('../views/componentB.vue'),
+      },
+    ],
+  },
 ];
 
 const router = createRouter({

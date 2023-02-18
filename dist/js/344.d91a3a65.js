@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkproject"]=self["webpackChunkproject"]||[]).push([[344],{7344:function(n,r,u){u.r(r),u.d(r,{default:function(){return a}});var e=u(3396);const t=(0,e._)("h1",null,"動態路由設定",-1),c=(0,e._)("div",null," 路徑上要加上/:id，id為自訂的內容。 ",-1);function l(n,r){return(0,e.wg)(),(0,e.iD)(e.HY,null,[t,c],64)}var i=u(89);const o={},s=(0,i.Z)(o,[["render",l]]);var a=s}}]);
+//# sourceMappingURL=344.d91a3a65.js.map

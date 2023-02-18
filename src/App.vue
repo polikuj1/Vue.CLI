@@ -20,6 +20,9 @@
             <!-- <router-link :to="{ name: '新頁面' }">New Page</router-link> -->
             <router-link to="/newPage" class="nav-link">New Page</router-link>
           </li>
+          <li class="nav-item">
+            <router-link to="/nameView" class="nav-link">命名視圖</router-link>
+          </li>
         </ul>
       </div>
     </div>

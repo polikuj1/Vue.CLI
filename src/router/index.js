@@ -51,11 +51,6 @@ const routes = [
         path: 'routerNav',
         component: () => import('../views/routerNavagation.vue'),
       },
-      {
-        // *代表捕獲所有的路徑，當路徑不存在時，可以渲染一個錯誤警告
-        path: '*',
-        component: Error,
-      },
     ],
   },
   {
@@ -79,11 +74,35 @@ const routes = [
       },
     ],
   },
+  // 全路徑下，將錯誤路徑導向定義好的錯誤頁面
+  {
+    path: '/:pathMatch(.*)*',
+    component: () => import('../views/notFound.vue'),
+  },
+  // 在newPage頁面下的錯誤路徑，會重新導向到home頁面
+  {
+    path: '/newPage/:pathMatch(.*)*',
+    redirect: {
+      name: 'home',
+    },
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+  // linkActiveClass: '',
+  linkExactActiveClass: 'active',
+  scrollBehavior(to, from, savedPosition) {
+    console.log(to, from, savedPosition);
+    // `savedPosition` 可以为空，如果没有的话，上次卷軸捲到哪裡的位置。
+    if (to.fullPath.match('about')) {
+      return {
+        top: 0,
+      };
+    }
+    return {};
+  },
 });
 
 export default router;

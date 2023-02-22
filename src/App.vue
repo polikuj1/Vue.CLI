@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button"
@@ -33,6 +33,10 @@
 </template>
 
 <style lang="scss">
+body {
+  padding-top: 100px;
+  height: 300vh;
+}
 #app {
   font-family:  Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
